@@ -10,10 +10,10 @@ import {
 import {
   BrowserModule,
   DomRendererFactory2
-} from "./chunk-AD5FYPG2.js";
+} from "./chunk-JZPDWFBZ.js";
 import {
   DOCUMENT
-} from "./chunk-5FHY7Z5A.js";
+} from "./chunk-3V5PCVRQ.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -30,7 +30,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-WGQFXCG2.js";
+} from "./chunk-ZZUFGAMK.js";
 
 // node_modules/@angular/animations/fesm2022/util-D9FfmVnv.mjs
 var LINE_START = "\n - ";

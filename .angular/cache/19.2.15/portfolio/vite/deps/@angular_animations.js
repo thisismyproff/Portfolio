@@ -20,7 +20,7 @@ import {
 } from "./chunk-SZJPLAKF.js";
 import {
   DOCUMENT
-} from "./chunk-5FHY7Z5A.js";
+} from "./chunk-3V5PCVRQ.js";
 import {
   ANIMATION_MODULE_TYPE,
   Inject,
@@ -32,7 +32,7 @@ import {
   setClassMetadata,
   ɵɵdefineInjectable,
   ɵɵinject
-} from "./chunk-WGQFXCG2.js";
+} from "./chunk-ZZUFGAMK.js";
 
 // node_modules/@angular/animations/fesm2022/animations.mjs
 var AnimationBuilder = class _AnimationBuilder {

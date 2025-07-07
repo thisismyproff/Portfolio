@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { ProjectsService } from '../../services/projects.service';
+import { Project } from '../../models/Project';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +10,14 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-    constructor(private titleService: Title) {
+
+    project:any;
+
+    constructor(private titleService: Title,private projectsService: ProjectsService) {
         this.titleService.setTitle('Mayur - Home');
+    }
+
+    ngOnInit() {
+       this.project = this.projectsService.getProjectById(0);
     }
 }
