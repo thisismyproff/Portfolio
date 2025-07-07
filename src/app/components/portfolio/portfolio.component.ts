@@ -11,6 +11,7 @@ import {
   query,
   stagger
 } from '@angular/animations';
+import { Tag } from '../../models/Tag';
 
 @Component({
   selector: 'app-portfolio',
@@ -33,11 +34,25 @@ import {
 export class PortfolioComponent {
 
   projects:Project[]= [];
-  
+  Java:boolean = false;
+  Angular:boolean = false;
+  isCollapsed: boolean = true;
 
 
   constructor(private titleService: Title,private projectsService: ProjectsService) {
     this.titleService.setTitle('Mayur - Portfolio');
     this.projects = this.projectsService.getProjects();
   }
+
+  Filter() {
+    let filterTags:Tag[] = [];
+    if (this.Java) {
+      filterTags.push(Tag.JAVA);
+    }
+    if (this.Angular) {
+      filterTags.push(Tag.ANGULAR);
+    }
+    this.projects = this.projectsService.getProjectsByFilter(filterTags);
+  }
+
 }

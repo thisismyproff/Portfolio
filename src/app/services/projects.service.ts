@@ -13,7 +13,7 @@ export class ProjectsService {
       summary:'A quiz application that allows users to create, share, and take quizzes on various topics. It features user authentication, quiz creation, and a leaderboard.',
       description:'Developed QuizPreen, increasing user engagement by 25% with interactive features.Engineered the platform with Java Spring, Angular, and Angular Material UI, cutting development time by 30%.Optimized quiz creation, boosting efficiency by 40% and raising user satisfaction by 20%.',
       projectUrl:'',
-      tags:[Tag.ANGULAR, Tag.SPRING, Tag.AWS],
+      tags:[Tag.ANGULAR, Tag.SPRING,Tag.JAVA],
       pictures:['/placeholder1.png','/placeholder2.png','/placeholder3.png']
     },
     { id:1,
@@ -46,6 +46,24 @@ export class ProjectsService {
 
   getProjectById(id: number): Project | undefined {
     return this.projects.find(project => project.id === id);
+  }
+  getProjectsByFilter(filterTags:Tag[]){
+    let filteredProjects: Project[] = [];
+    if(filterTags.length === 0){
+      return this.projects;
+    }
+    this.projects.forEach(function(project){
+      let foundAll = true;
+      filterTags.forEach(function(tag){
+        if(project.tags.includes(tag)=== false){
+          foundAll = false;
+        }
+      });
+      if(foundAll){
+      filteredProjects.push(project);
+      }
+    });
+    return filteredProjects;
   }
   
 }
