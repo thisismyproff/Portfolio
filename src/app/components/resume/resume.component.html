@@ -88,8 +88,8 @@
         </accordion-group>
 
         <!-- Certifications -->
-        <accordion-group heading="Certifications" >
-          <carousel [isAnimated]="true" [interval]="3000" [noPause]="true">
+        <accordion-group heading="Certifications" [panelClass]="'certifications-panel'">
+          <carousel [isAnimated]="true" [interval]="3000" [noPause]="true" style="background-color: black;">
             <slide *ngFor="let image of pictures">
               <div class="d-flex justify-content-center">
                 <img [src]="image" style="max-width:700px; max-height:700px;" class="border rounded shadow-sm" alt="Certification Image">

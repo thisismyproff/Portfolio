@@ -1,0 +1,18 @@
+.social-link i {
+  font-size: 2rem;
+  transition: color 0.2s;
+}
+
+.social-link.github i {
+  color: #24292e;
+}
+.social-link.linkedin i {
+  color: #0a66c2;
+}
+.social-link.email i {
+  color: #e94343;
+}
+
+.social-link:hover i {
+  opacity: 0.8;
+}

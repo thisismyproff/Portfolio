@@ -5,4 +5,9 @@ accordion-group::ng-deep .btn-link{
 accordion-group::ng-deep .card-header{
   background-color: #007bff;
 }
+:host ::ng-deep .certifications-panel .panel-body,
+:host ::ng-deep .certifications-panel .accordion-body,
+:host ::ng-deep .certifications-panel .card-body {
+  background: linear-gradient(90deg, rgba(1, 163, 150, 1) 0%, rgba(7, 58, 187, 1) 100%);
+}
 
