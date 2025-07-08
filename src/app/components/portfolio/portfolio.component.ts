@@ -36,6 +36,9 @@ export class PortfolioComponent {
   projects:Project[]= [];
   Java:boolean = false;
   Angular:boolean = false;
+  Python:boolean = false;
+  Spring:boolean = false;
+  ML:boolean = false;
   isCollapsed: boolean = true;
 
 
@@ -51,6 +54,15 @@ export class PortfolioComponent {
     }
     if (this.Angular) {
       filterTags.push(Tag.ANGULAR);
+    }
+    if (this.Python) {
+      filterTags.push(Tag.PYTHON);
+    }
+    if (this.Spring) {
+      filterTags.push(Tag.SPRING);
+    }
+    if (this.ML) {
+      filterTags.push(Tag.ML);
     }
     this.projects = this.projectsService.getProjectsByFilter(filterTags);
   }

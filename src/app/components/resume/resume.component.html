@@ -1,1 +1,103 @@
-<p>resume works!</p>
+<div class="container my-4">
+  <div class="text-center mb-4">
+    <button class="btn btn-primary shadow" (click)="downloadResume()">
+      <i class="bi bi-download"></i> Download Resume
+    </button>
+  </div>
+
+  <div class="pb-2">
+      <accordion [isAnimated]="true" class="shadow primary">
+
+
+        <!-- Skills -->
+        <accordion-group heading="Skills">
+            <div class="row">
+            <div class="col-md-4">
+              <strong>Languages:</strong>
+              <ul>
+              <li>Java</li>
+              <li>JavaScript/TypeScript</li>
+              <li>Python</li>
+              <li>SQL</li>
+              <li>CSS</li>
+              <li>HTML</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <strong>Frameworks & Libraries:</strong>
+              <ul>
+              <li>Angular</li>
+              <li>Spring Boot</li>
+              <li>React</li>
+              <li>Microservices</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <strong>Tools & Platforms:</strong>
+              <ul>
+              <li>AWS</li>
+              <li>Azure</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Postman</li>
+              <li>REST API</li>
+              <li>Prompt Engineering</li>
+              </ul>
+            </div>
+            </div>
+        </accordion-group>
+
+        <!-- Experience -->
+        <accordion-group heading="Experience">
+          <tabset>
+            <tab heading="Software Engineer, MRI Software">
+              <p><strong>Aug 2022 – Present</strong></p>
+              <ul>
+                <li> I contributed to a real estate product used in the US payment industry,
+                  generating a turnover of 40-60 million USD.</li>
+                <li> Implemented MFA(Multi-Factor Authentication) as well, In the span of 2 months.</li>
+                <li>Engaged in Agile methodologies, leveraging Jira and Confluence for project management,
+                  created 5 different confluence documentation for internal KT transfer.</li>
+                <li>Utilized Java, and Hibernate to create a robust and scalable RESTful API for the company's payment
+                  platform, resulting in a 30% increase in sales due to improved user experience.</li>
+                <li>Tech Stack used: Java , Spring Boot , Angular , Java Script , CSS , HTML</li>
+              </ul>
+            </tab>
+            <tab heading="Intern, YBI Foundation">
+              <p><strong>Mar 2022 – Apr 2022</strong></p>
+              <ul>
+                <li> Collaborated with colleagues on multiple projects, providing insights and assistance that resulted in a 15%
+                  increase in team productivity.</li>
+                <li> Navigated challenges, continually learning and applying new methodologies to optimize data processing workflows, reducing project turnaround time by 25%.</li>
+                <li>
+                  Tech Stack Used : Python , Machine learning ,Deep learning.
+                </li>
+              </ul>
+            </tab>
+          </tabset>
+        </accordion-group>
+
+        <!-- Education -->
+        <accordion-group heading="Education">
+          <div class="card mb-2">
+            <div class="card-body">
+              <strong>Bachelor of Engineering in Computer Science</strong><br />
+              Parul University, 2019 – 2023
+            </div>
+          </div>
+        </accordion-group>
+
+        <!-- Certifications -->
+        <accordion-group heading="Certifications" >
+          <carousel [isAnimated]="true" [interval]="3000" [noPause]="true">
+            <slide *ngFor="let image of pictures">
+              <div class="d-flex justify-content-center">
+                <img [src]="image" style="max-width:700px; max-height:700px;" class="border rounded shadow-sm" alt="Certification Image">
+              </div>
+            </slide>
+          </carousel>
+        </accordion-group>
+      </accordion>
+  </div>
+
+</div>

@@ -4,9 +4,9 @@
 </div>
 
 <div class="modal-body">
-    <carousel>
-        <slide *ngFor="let image of project.pictures">
-            <img [src]="image" class="d-block w-100" alt="{{project.name}}">
+    <carousel [isAnimated]="true" [interval]="3000"  [noPause]="true">
+        <slide *ngFor="let image of project.pictures" >
+            <img [src]="image" class="d-block w-100 border" alt="{{project.name}}">
         </slide>
     </carousel>
     <h3>Description</h3>

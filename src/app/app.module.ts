@@ -16,6 +16,9 @@ import { ProjectModalComponent } from './components/project-modal/project-modal.
 import {CarouselModule} from 'ngx-bootstrap/carousel';
 import {CollapseModule} from 'ngx-bootstrap/collapse';
 import { FormsModule } from '@angular/forms';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { TabDirective } from 'ngx-bootstrap/tabs';
+import { TabsetComponent } from 'ngx-bootstrap/tabs';
 
 @NgModule({
   declarations: [
@@ -36,8 +39,11 @@ import { FormsModule } from '@angular/forms';
     ModalModule.forRoot(),
     CarouselModule,
     CollapseModule.forRoot(),
-    FormsModule// Importing ngx-bootstrap modal module
-  ],
+    AccordionModule.forRoot(),
+    FormsModule,
+    TabDirective,
+    TabsetComponent,
+],
   providers: [],
   bootstrap: [AppComponent]
 })

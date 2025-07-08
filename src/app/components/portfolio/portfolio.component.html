@@ -15,6 +15,10 @@
                       <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="Java" (change)="Filter()" name="Java" >
                       <label class="form-check-label small">Java</label>
                     </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="Python" (change)="Filter()" name="Python" >
+                      <label class="form-check-label small">Python</label>
+                    </div>
                   </div>
                 </div>
                 <div class="col">
@@ -24,6 +28,14 @@
                       <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="Angular" (change)="Filter()" name="Angular" >
                       <label class="form-check-label small">Angular</label>
                     </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="Spring" (change)="Filter()" name="Spring" >
+                      <label class="form-check-label small">Spring Boot</label>
+                    </div>
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input position-static me-2" [(ngModel)]="ML" (change)="Filter()" name="ML" >
+                      <label class="form-check-label small">Machine Learning</label>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -31,11 +43,10 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
     <div class="row ">
-      <div *ngFor="let project of projects" class="col-12 col-sm-6 col-md-4 d-flex justify-content-between mb-4">
+      <div *ngFor="let project of projects" class="col-12 col-sm-6 col-md-4 d-flex justify-content-between">
         <app-project-card [project]="project"></app-project-card>
-      </div>  
+      </div>
     </div>
 </div>
-  
