@@ -1,13 +1,16 @@
 accordion-group::ng-deep .btn-link{
-  color: white;
+  color: black;
+  text-decoration: none;
 }
 
 accordion-group::ng-deep .card-header{
-  background-color: #007bff;
+  background: linear-gradient(120deg, #f3e7fe 0%, #ffe6f0 100%);
 }
+
+
 :host ::ng-deep .certifications-panel .panel-body,
 :host ::ng-deep .certifications-panel .accordion-body,
 :host ::ng-deep .certifications-panel .card-body {
-  background: linear-gradient(90deg, rgba(1, 163, 150, 1) 0%, rgba(7, 58, 187, 1) 100%);
+  background: linear-gradient(120deg, #e0c3fc 0%, #f9f9f9 100%);
 }
 

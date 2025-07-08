@@ -10,7 +10,16 @@
 
 
         <!-- Skills -->
-        <accordion-group heading="Skills">
+        <accordion-group  panelClass="panel panel-info" >
+            <button
+              class="btn btn-link btn-block justify-content-between d-flex w-100  shadow-none"
+              accordion-heading type="button">
+              <div class="pull-left float-left">Skills</div>
+              <i
+                class="bi bi-chevron-down"
+                style="margin-left: 8px; transition: transform 0.2s;"
+              ></i>
+            </button>
             <div class="row">
             <div class="col-md-4">
               <strong>Languages:</strong>
@@ -47,8 +56,17 @@
             </div>
         </accordion-group>
 
-        <!-- Experience -->
-        <accordion-group heading="Experience">
+
+        <accordion-group>
+          <button
+              class="btn btn-link btn-block justify-content-between d-flex w-100  shadow-none"
+              accordion-heading type="button">
+              <div class="pull-left float-left">Experience</div>
+              <i
+                class="bi bi-chevron-down"
+                style="margin-left: 8px; transition: transform 0.2s;"
+              ></i>
+            </button>
           <tabset>
             <tab heading="Software Engineer, MRI Software">
               <p><strong>Aug 2022 – Present</strong></p>
@@ -78,7 +96,16 @@
         </accordion-group>
 
         <!-- Education -->
-        <accordion-group heading="Education">
+        <accordion-group >
+          <button
+              class="btn btn-link btn-block justify-content-between d-flex w-100  shadow-none"
+              accordion-heading type="button">
+              <div class="pull-left float-left">Education</div>
+              <i
+                class="bi bi-chevron-down"
+                style="margin-left: 8px; transition: transform 0.2s;"
+              ></i>
+            </button>
           <div class="card mb-2">
             <div class="card-body">
               <strong>Bachelor of Engineering in Computer Science</strong><br />
@@ -88,7 +115,16 @@
         </accordion-group>
 
         <!-- Certifications -->
-        <accordion-group heading="Certifications" [panelClass]="'certifications-panel'">
+        <accordion-group  [panelClass]="'certifications-panel'">
+          <button
+              class="btn btn-link btn-block justify-content-between d-flex w-100  shadow-none"
+              accordion-heading type="button">
+              <div class="pull-left float-left">Certifications</div>
+              <i
+                class="bi bi-chevron-down"
+                style="margin-left: 8px; transition: transform 0.2s;"
+              ></i>
+            </button>
           <carousel [isAnimated]="true" [interval]="3000" [noPause]="true" style="background-color: black;">
             <slide *ngFor="let image of pictures">
               <div class="d-flex justify-content-center">
